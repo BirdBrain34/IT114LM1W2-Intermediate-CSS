@@ -15,10 +15,9 @@
 .todo-0-container .box{
     transform: scale(10%);
     opacity: 20%;
-
+    /* Apply animation here */
     animation: sizeAni 800ms infinite alternate;
 }
-/* Apply animation here */
     @keyframes sizeAni{
         from {
             transform: scale(20%);
