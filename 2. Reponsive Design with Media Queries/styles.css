@@ -23,11 +23,11 @@ a different color when the screen is smaller than 500px*/
 .change-styles{
     width: 100%;
     height: 500px;
-    background-color: red;
+    background-color: blueviolet;
 }
 @media only screen and (min-width: 500px) {
     .change-styles{
-        background-color: blueviolet;
+        background-color: red;
     }
 }
 
@@ -37,15 +37,54 @@ a different color when the screen is smaller than 500px*/
 when the screen's width is smaller than 500px */
 .change-layout{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
-
+@media only screen and (min-width: 500px) {
+    .change-layout{
+        display: flex;
+        flex-direction: row;
+    }
+}
 
 /* Todo 2.3: Define the common breakpoints for devices - phone, tablet, small screens (laptop), and large screens (desktops).
 For each break point, the background of .common-breakpoints must change
 */
+#device{
+    font-size:70px;
+    text-align: center;
+    position: relative;
+    transform: translateY(100px)
+}
+#device::before
+{
+    content: "Nokia phones";
+}
 .common-breakpoints{
     width: 100%;
     height: 300px;
     background-color: blue;
+}
+@media only screen and (min-width: 300px) {
+    #device::before{
+        content: "Mobile Phone";
+    }
+    .common-breakpoints{
+        background-color: yellow;
+    }
+}
+@media only screen and (min-width: 600px) {
+    #device::before{
+        content: "Tablet";
+    }
+    .common-breakpoints{
+        background-color: green;
+    }
+}
+@media only screen and (min-width: 900px) {
+    #device::before{
+        content: "Desktop";
+    }
+    .common-breakpoints{
+        background-color: violet;
+    }
 }
